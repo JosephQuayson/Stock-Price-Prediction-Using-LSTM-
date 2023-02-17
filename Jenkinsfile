@@ -1,16 +1,11 @@
-pipeline{
+pipeline {
     agent any 
-    stages{
+    stages {
          stage('clone'){
             steps {
-                sh 'echo clone1'
-                sh 'echo clone2'
+                sh 'echo hello'
             }
          }
-          stage('build'){
-            steps {
-                sh 'echo build'
-            }
-         }
+
     }
 }
