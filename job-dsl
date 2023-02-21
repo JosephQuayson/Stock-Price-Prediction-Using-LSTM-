@@ -1,0 +1,24 @@
+pipelineJob('example') {
+    description('This is dsl examples')
+
+    triggers {
+        cron('* * * * *')
+    }
+    logRotator {
+        numToKeep(5)
+        artifactNumToKeep(1)
+    }
+     definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                    url ('')
+                  }
+                  branch('main')
+               }
+            }
+            scriptPath("job-dsl")
+        }
+    }
+}
