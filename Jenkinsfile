@@ -2,7 +2,7 @@ pipeline{
     agent any 
     environment{
         script_options = "--clean 30" 
-        docker_pass = credentials('docker_password')
+        Docker_pass = credentials('docker-password')
     }
     stages{
         stage('clone'){
@@ -34,7 +34,7 @@ pipeline{
         }
         stage('docker login'){
             steps{
-                sh "docker login -u josephquay -p $docker_pass "
+                sh "docker login -u josephquay -p $Docker_pass "
                 }
         }
     }
