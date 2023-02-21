@@ -13,12 +13,12 @@ pipelineJob('example') {
             scm {
                 git {
                     remote {
-                    url ('')
+                    url ('https://github.com/JosephQuayson/Stock-Price-Prediction-Using-LSTM-.git')
                   }
                   branch('main')
                }
             }
-            scriptPath("job-dsl")
+            scriptPath("Jenkinsfile")
         }
     }
 }
